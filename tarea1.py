@@ -6,3 +6,6 @@ def holaMundo():
 @app.route('/header/')
 def headerSite():
     return 'Encabezado de sitio !'
+@app.route('/container/')
+def containerSite():
+    return 'contenido del sitio !'
