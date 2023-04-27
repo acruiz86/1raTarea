@@ -1,11 +1,11 @@
 from flask import Flask
 app = Flask(__name__)
 @app.route('/')
-def hello_world():
+def holaMundo():
     return 'Mundo feliz!'
 @app.route('/nuevo/')
-def nuevo_world():
+def endPoint1():
     return 'el mundo es mejor!'
 @app.route('/prueba2/')
-def prueba2Ejemplo():
+def endPoint2():
     return 'Ya todo cambio'
