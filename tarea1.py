@@ -6,6 +6,6 @@ def holaMundo():
 @app.route('/nuevo/')
 def endPoint1():
     return 'el mundo es mejor!'
-@app.route('/prueba2/')
+@app.route('/pruaba4/')
 def endPoint2():
     return 'Ya todo cambio'
