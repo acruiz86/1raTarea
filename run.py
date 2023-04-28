@@ -10,9 +10,8 @@ def headerSite():
 
 @app.route('/container/')
 def containerSite():
-    a=0
-    if a>0:
-        a=0
-    else:
-        a=60
+    a=6
+    b=7
+    c=a*5+b*8
+    print(c)
     return 'contenido del sitio !'
