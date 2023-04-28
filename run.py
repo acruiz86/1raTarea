@@ -11,7 +11,3 @@ def headerSite():
     c=a*b/5 
     return 'Encabezado de sitio !'
 
-
-@app.route('/container/')
-def containerSite():
-    return 'contenido del sitio !'
