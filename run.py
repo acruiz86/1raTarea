@@ -10,4 +10,11 @@ def headerSite():
 
 @app.route('/container/')
 def containerSite():
+<<<<<<< HEAD
+=======
+    a=6
+    b=7
+    c=a*5+b*8
+    print(c)
+>>>>>>> features/conteiner
     return 'contenido del sitio !'
