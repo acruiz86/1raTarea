@@ -6,10 +6,9 @@ def holaMundo():
     
 @app.route('/header/')
 def headerSite():
-    a=8
-    b=50
-    c=a*b/5 
-    return 'Encabezado de sitio !'
+    variable = "mensaje nuevo para todos"
+    return variable
+
 
 @app.route('/container/')
 def containerSite():
