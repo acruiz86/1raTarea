@@ -15,3 +15,6 @@ def containerSite():
     b = 9
     c = a * b
     return 'contenido del sitio !'
+
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port="8085")
