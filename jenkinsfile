@@ -1,8 +1,6 @@
 pipeline {
 agent any
- tools {
 
- }
  parameters {
     string(name:'container_name',defaultValue:'flask_proyect',description:'Nombre del contenedor')
     string(name:'image_name',defaultValue:'flask_image',description:'Nombre de la imagen')
