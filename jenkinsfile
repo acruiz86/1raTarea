@@ -28,7 +28,7 @@ stages{
                         echo 'Exceptio  ocurred'+e.toString()
                     }
                 }
-                sh 'docker build -t ${imagen_name}:${tag_image} .'
+               
 
             }
             
