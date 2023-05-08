@@ -13,7 +13,7 @@ stages {
                 {
                     git branch:'master',url:'https://github.com/acruiz86/1raTarea.git'
                     dir('1raTarea')
-                    echo "paso instalacion"
+                    echo 'paso instalacion'
                 }
             }
             stage('test')
@@ -22,7 +22,7 @@ stages {
                 {
                     
                 
-                    echo "paso Test"
+                    echo 'paso Test'
                 }
             }
              stage('build')
@@ -30,7 +30,7 @@ stages {
                 steps
                 {
                  
-                    echo "paso build"
+                    echo 'paso build'
                 }
             }
             stage('deploy')
@@ -39,7 +39,7 @@ stages {
                 {
                     
                    
-                    echo "paso deploy"
+                    echo 'paso deploy'
                 }
             }
            
