@@ -1,16 +1,6 @@
 pipeline {
 agent any
-stages {
-            stage('Install')
-            {
-                steps
-                {
-                    git branch:'master',url:'https://github.com/acruiz86/1raTarea.git'
-                    dir('1raTarea')
-                    echo 'instalacion terminada ....'
-                }
-            }   
-         }
+
 }
 
 
