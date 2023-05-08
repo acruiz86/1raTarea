@@ -13,6 +13,34 @@ stages {
                 {
                     git branch:'master',url:'https://github.com/acruiz86/1raTarea.git'
                     dir('1raTarea')
+                    echo "paso instalacion"
+                }
+            }
+            stage('test')
+            {
+                steps
+                {
+                    
+                    dir('1raTarea')
+                    echo "paso Test"
+                }
+            }
+             stage('build')
+            {
+                steps
+                {
+                    
+                    dir('1raTarea')
+                    echo "paso build"
+                }
+            }
+            stage('deploy')
+            {
+                steps
+                {
+                    
+                    dir('1raTarea')
+                    echo "paso deploy"
                 }
             }
            
