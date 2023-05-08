@@ -1,8 +1,8 @@
 pipeline {
 agent any
- tools {
-      docker 'docker'
-      }
+tools{
+    docker 'docker'
+}
 parameters{
     string(name:'imagen_name',defaultValue:'flask_imagen', description:'nombre de la imagne')
     string(name:'conteiner_name',defaultValue:'flask_conteiner', description:'nombre del contenedor')
