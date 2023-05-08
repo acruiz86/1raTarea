@@ -3,6 +3,7 @@ agent any
 parameters{
     string(name:'imagen_name',defaultValue:'flask_imagen', description:'nombre de la imagne')
     string(name:'conteiner_name',defaultValue:'flask_conteiner', description:'nombre del contenedor')
+    string(name:'tag_image',defaultValue:'1', description:'numero de la inversion')
     string(name:'puerto',defaultValue:'8083', description:'puerto')
 }
 stages{
@@ -16,6 +17,16 @@ stages{
         steps{
             dir('.'){
                 echo 'building....'
+                sctipt{
+                    try{
+                        sh 'docker stop ${conteiner_name}'
+                        sh 'docker rm ${conteiner_name}'
+                        sh 'docker rmi ${imagen_name}: ${tag_image}'
+                    }catch(Exception e)
+                    {
+                        echo 'Exceptio ocurred'+e.toString()
+                    }
+                }
 
             }
             
