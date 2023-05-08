@@ -29,7 +29,7 @@ stages{
                         echo 'Exception   ocurred'+e.toString()
                     }
                 }
-                dir('1raTarea'){
+                dir('.'){
                     script{
                         sh 'docker build -t ${imagen_name}:${tag_image} .'
                     }
