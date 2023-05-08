@@ -11,6 +11,7 @@ stages{
             git branch: 'master', url: 'https://github.com/acruiz86/1raTarea.git/'
 
         }
+    }
      stage('build'){
         steps{
             dir('.'){
