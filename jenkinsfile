@@ -13,7 +13,7 @@ stages {
                 {
                     git branch:'master',url:'https://github.com/acruiz86/1raTarea.git'
                     dir('1raTarea')
-                    echo 'paso instalacion'
+
                 }
             }
             
