@@ -21,8 +21,7 @@ stages {
                 steps
                 {
                     
-                
-                    echo 'paso Test'
+
                 }
             }
              stage('build')
@@ -30,16 +29,14 @@ stages {
                 steps
                 {
                  
-                    echo 'paso build'
+
                 }
             }
             stage('deploy')
             {
                 steps
                 {
-                    
-                   
-                    echo 'paso deploy'
+
                 }
             }
            
