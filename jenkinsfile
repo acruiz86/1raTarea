@@ -7,7 +7,7 @@ agent any
     string(name:'container_port',defaultValue:'80',description:'Puerto que usa el contenedor')
  }
 stages {
-            stage('install')
+            stage('Install')
             {
                 steps
                 {
