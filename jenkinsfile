@@ -16,29 +16,7 @@ stages {
                     echo 'paso instalacion'
                 }
             }
-            stage('test')
-            {
-                steps
-                {
-                    
-
-                }
-            }
-             stage('build')
-            {
-                steps
-                {
-                 
-
-                }
-            }
-            stage('deploy')
-            {
-                steps
-                {
-
-                }
-            }
+            
            
 
         }
