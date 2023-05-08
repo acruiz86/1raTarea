@@ -2,6 +2,8 @@ pipeline {
 agent any
 parameters{
     string(name:'imagen_name',defaultValue:'flask_imagen', description:'nombre de la imagne')
+    string(name:'conteiner_name',defaultValue:'flask_conteiner', description:'nombre del contenedor')
+    string(name:'puerto',defaultValue:'8083', description:'puerto')
 }
 stages{
     stage('install'){
