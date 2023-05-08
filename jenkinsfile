@@ -20,6 +20,7 @@ stages{
                 echo 'building....'
                 script{
                     try{
+                        sh 'chmod 777 /var/run/docker.sock'
                         sh 'docker stop ${conteiner_name}'
                         sh 'docker rm ${conteiner_name}'
                         sh 'docker rmi ${imagen_name}: ${tag_image}'
