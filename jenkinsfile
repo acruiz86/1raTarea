@@ -16,7 +16,7 @@ stages{
     }
      stage('build'){
         steps{
-            dir('.'){
+            dir('1raTarea'){
                 echo 'building....'
                 script{
                     try{
@@ -29,7 +29,7 @@ stages{
                         echo 'Exception   ocurred'+e.toString()
                     }
                 }
-                dir('.'){
+                dir('1raTarea'){
                     script{
                         sh 'docker build -t ${imagen_name}:${tag_image} .'
                     }
