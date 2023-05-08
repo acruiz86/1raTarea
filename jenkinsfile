@@ -17,12 +17,13 @@ stages{
         steps{
             dir('.'){
                 echo 'building....'
-                sctipt{
+                script{
                     try{
                         sh 'docker stop ${conteiner_name}'
                         sh 'docker rm ${conteiner_name}'
                         sh 'docker rmi ${imagen_name}: ${tag_image}'
-                    }catch(Exception e)
+                    }
+                    catch(Exception e)
                     {
                         echo 'Exceptio ocurred'+e.toString()
                     }
