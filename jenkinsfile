@@ -27,7 +27,7 @@ stages{
                     }
                     catch(Exception e)
                     {
-                        echo 'Exception   ocurred'+e.toString()
+                        echo 'Exception    ocurred'+e.toString()
                     }
                 }
                 dir('.'){
