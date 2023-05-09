@@ -22,6 +22,7 @@ stages{
                 echo 'building....'
                 script{
                     try{
+                        sh 'ls -a'
                         sh 'docker -v'
                         sh 'docker stop ${conteiner_name}'
                         sh 'docker rm ${conteiner_name}'
