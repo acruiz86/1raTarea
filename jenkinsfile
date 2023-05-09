@@ -24,7 +24,7 @@ stages{
                     try{
                         sh 'ls -a'
                         sh 'docker -v'
-                        sh 'sudo usermod -aG docker $USER'
+                        sh 'sudo su usermod -aG docker $USER'
                         sh 'docker stop ${conteiner_name}'
                         sh 'docker rm ${conteiner_name}'
                         sh 'docker rmi ${imagen_name}: ${tag_image}'
@@ -36,7 +36,7 @@ stages{
                 }
                 
                     script{
-                        sh 'sudo su docker build -t ${imagen_name}:${tag_image} .'
+                        sh 'docker build -t ${imagen_name}:${tag_image} .'
                     }
                 
               
