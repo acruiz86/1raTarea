@@ -35,7 +35,7 @@ stages{
                 }
                 
                     script{
-                        sh 'docker build -t ${imagen_name}:${tag_image} .'
+                        sh 'sudo su docker build -t ${imagen_name}:${tag_image} .'
                     }
                 
               
