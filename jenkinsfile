@@ -31,7 +31,7 @@ stages{
                     }
                     catch(Exception e)
                     {
-                        echo 'Exception  prueba n   ocurred'+e.toString()
+                        echo 'Exception  prueba  n   ocurred'+e.toString()
                     }
                 }
                 
