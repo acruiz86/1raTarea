@@ -18,7 +18,7 @@ stages{
     }
      stage('build'){
         steps{
-            dir('1raTarea'){
+            dir('.'){
                 echo 'building....'
                 script{
                     try{
