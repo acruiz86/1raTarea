@@ -24,6 +24,7 @@ stages{
                     try{
                         sh 'ls -a'
                         sh 'docker -v'
+                        sh 'systemctl status docker'
                         sh 'usermod -aG docker $USER'
                         sh 'docker stop ${conteiner_name}'
                         sh 'docker rm ${conteiner_name}'
