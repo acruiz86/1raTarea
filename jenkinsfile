@@ -24,7 +24,7 @@ stages{
                     try{
                         sh 'ls -a'
                         sh 'docker -v'
-                        sh 'systemctl status docker'
+                        sh 'docker info'
                         sh 'usermod -aG docker $USER'
                         sh 'docker stop ${conteiner_name}'
                         sh 'docker rm ${conteiner_name}'
@@ -32,7 +32,7 @@ stages{
                     }
                     catch(Exception e)
                     {
-                        echo 'Exception  prueba  n      ocurred'+e.toString()
+                        echo 'Exception  prueba   n      ocurred'+e.toString()
                     }
                 }
                 
