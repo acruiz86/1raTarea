@@ -2,7 +2,7 @@ pipeline {
     agent{
         dockerfile {
         additionalBuildArgs  '--build-arg version=1.0'
-        arg '-t mi_imagen_pl'
+        args '-t mi_imagen_pl'
         }
         } 
         stages{
