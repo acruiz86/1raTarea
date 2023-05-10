@@ -17,12 +17,12 @@ stages
                     dockerfile
                         {
                             additionalBuildArgs  '--build-arg version=1.0'
-                            args '-d --name mi__app2 -p 8000:8005 '
+                            args '-d -p 8000:8005 '
                         }
                  } 
             steps
                 {
-                    echo 'pruebaaaa'
+                    echo 'pruebaa aa'
                 }
         }
     }
