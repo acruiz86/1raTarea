@@ -1,15 +1,22 @@
 pipeline {
-    agent{
-        dockerfile {
-        additionalBuildArgs  '-t imagen_pljenk--build-arg name=miImagen version=1.0'
-        args '--name mi__app -p 8000:8005'
-        }
-        } 
+   
         stages{
             stage('test'){
+                echo 'iniciando prueba'
+            }
+
+        }
+         stages{
+            stage('BUILD'){
+                 agent{
+                   dockerfile {
+                                additionalBuildArgs  '--build-arg version=1.0'
+                                args '--name mi__app2 -p 8000:8005'
+                                }
+                        } 
                 steps{
 
-                    sh 'docker info'
+
                     echo 'pruebaaaa'
                 }
             }
