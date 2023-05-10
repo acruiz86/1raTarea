@@ -44,7 +44,7 @@ stages{
         steps{
             script{
                 echo 'Iniciando Despliegue...'
-                sh 'docker run -d --name ${conteiner_name} -p ${puerto}:8080  ${imagen_name}:${tag_image}' 
+                sh 'docker run -d --name ${conteiner_name} -p ${puerto}:8085  ${imagen_name}:${tag_image}' 
                 echo 'despliegue realizado ......'
 
             }
