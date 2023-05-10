@@ -7,7 +7,7 @@ parameters{
     string(name:'imagen_name',defaultValue:'flask_imagen_jen', description:'nombre de la imagne')
     string(name:'conteiner_name',defaultValue:'flask_conteiner_jenk', description:'nombre del contenedor')
     string(name:'tag_image',defaultValue:'1', description:'numero de la inversion')
-    string(name:'puerto',defaultValue:'8083', description:'puerto')
+    string(name:'puerto',defaultValue:'8000', description:'puerto')
 }
 stages{
     stage('install'){
