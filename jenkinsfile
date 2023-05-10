@@ -1,27 +1,29 @@
-pipeline {
+pipeline 
+{
    
-        stages{
-            stage('test'){
-                echo 'iniciando prueba'
-            }
-
-        }
-         stages{
-            stage('BUILD'){
-                 agent{
-                   dockerfile {
-                                additionalBuildArgs  '--build-arg version=1.0'
-                                args '--name mi__app2 -p 8000:8005'
-                                }
-                        } 
-                steps{
-
-
+stages
+    {
+     stage('test')
+        {
+            echo 'iniciando prueba'
+        } 
+        stage('BUILD')
+        {
+            agent
+                {
+                    dockerfile
+                        {
+                            additionalBuildArgs  '--build-arg version=1.0'
+                            args '--name mi__app2 -p 8000:8005'
+                        }
+                 } 
+            steps
+                {
                     echo 'pruebaaaa'
                 }
-            }
-
         }
+    }
 }
+
 
 
