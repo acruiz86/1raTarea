@@ -1,56 +1,16 @@
 pipeline {
-agent any
-tools{
-    dockerTool 'docker'
-}
-parameters{
-    string(name:'imagen_name',defaultValue:'flask_imagen_jen', description:'nombre de la imagne')
-    string(name:'conteiner_name',defaultValue:'flask_conteiner_jenk', description:'nombre del contenedor')
-    string(name:'tag_image',defaultValue:'1', description:'numero de la inversion')
-    string(name:'puerto',defaultValue:'8000', description:'puerto')
-}
-stages{
-    stage('install'){
-        steps{
-            git branch: 'master', url: 'https://github.com/acruiz86/1raTarea.git/'
-
+    agent{
+        dockerfile true
         }
-    }
-     stage('build'){
-        steps{
-            
-                echo 'building....'
-                script{
-                    try{
-                        sh 'docker stop ${conteiner_name}'
-                        sh 'docker rm ${conteiner_name}'
-                        sh 'docker rmi ${imagen_name}: ${tag_image}'
-                    }
-                    catch(Exception e)
-                    {
-                        echo 'Exception prueba  ocurred'+e.toString()
-                    }
+        stages{
+            stage('test'){
+                steps{
+
+                    sh 'docker info'
                 }
-                
-                    script{
-                        sh 'docker build --help'
-                        sh 'docker build -t ${imagen_name}:${tag_image} .'
-                    }
-            
-            
-        }
-    }
-    stage('deploy'){
-        steps{
-            script{
-                echo 'Iniciando Despliegue...'
-                sh 'docker run -d --name ${conteiner_name} -p ${puerto}:8085  ${imagen_name}:${tag_image}' 
-                echo 'despliegue realizado ......'
-
             }
+
         }
-    }
-}
 }
 
 
