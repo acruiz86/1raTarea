@@ -1,7 +1,7 @@
 pipeline {
     agent{
         dockerfile {
-        additionalBuildArgs  '--build-arg -t miImagen version=1.0'
+        additionalBuildArgs  '--build-arg name=miImagen version=1.0'
         args '--name mi__app -p 8000:8005'
         }
         } 
