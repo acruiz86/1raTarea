@@ -5,7 +5,9 @@ stages
     {
      stage('test')
         {
+            steps{
             echo 'iniciando prueba'
+            }
         } 
         stage('BUILD')
         {
