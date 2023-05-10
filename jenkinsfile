@@ -4,8 +4,8 @@ tools{
     dockerTool 'docker'
 }
 parameters{
-    string(name:'imagen_name',defaultValue:'flask_imageny_jen', description:'nombre de la imagne')
-    string(name:'conteiner_name',defaultValue:'flask_conteiner', description:'nombre del contenedor')
+    string(name:'imagen_name',defaultValue:'flask_imagen_jen', description:'nombre de la imagne')
+    string(name:'conteiner_name',defaultValue:'flask_conteiner_jenk', description:'nombre del contenedor')
     string(name:'tag_image',defaultValue:'1', description:'numero de la inversion')
     string(name:'puerto',defaultValue:'8083', description:'puerto')
 }
@@ -22,10 +22,6 @@ stages{
                 echo 'building....'
                 script{
                     try{
-                        sh 'ls -a'
-                        sh 'docker -v'
-                        sh 'docker info'
-                        sh 'usermod -aG docker $USER'
                         sh 'docker stop ${conteiner_name}'
                         sh 'docker rm ${conteiner_name}'
                         sh 'docker rmi ${imagen_name}: ${tag_image}'
@@ -40,9 +36,6 @@ stages{
                         sh 'docker build --help'
                         sh 'docker build -t ${imagen_name}:${tag_image} .'
                     }
-                
-              
-
             
             
         }
