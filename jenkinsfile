@@ -1,6 +1,8 @@
 pipeline {
     agent{
         dockerfile true
+        additionalBuildArgs  '--build-arg version=1.0'
+        arg '-t mi_imagen_pl'
         } 
         stages{
             stage('test'){
