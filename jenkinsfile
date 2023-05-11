@@ -22,6 +22,7 @@ stages
         {
                 steps
                 {
+                    Image.run('-p 8000:8085')
                     echo 'deploy '
                 }
         }
