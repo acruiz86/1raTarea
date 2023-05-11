@@ -29,7 +29,7 @@ stages
         {
                 steps
                 {
-                    echo 'deploy'
+                    echo 'deploy '
                 }
         }
     }
