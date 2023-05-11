@@ -15,7 +15,7 @@ stages
             agent
                 {
                     dockerfile
-                        {   dockerfile true
+                        {   filename 'Dockerfile'
                             additionalBuildArgs  '--build-arg version=1.0'
                             args '-p 9000:8085 '
                         }
