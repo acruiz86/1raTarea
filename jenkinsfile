@@ -1,6 +1,12 @@
 pipeline 
 {
-    agent any
+ agent{
+       dockerfile
+         {  filename 'Dockerfile'
+            additionalBuildArgs  '--build-arg version=1.0'
+            args '-p 9000:8085 '
+        }
+        } 
    
 stages
     {
@@ -12,14 +18,7 @@ stages
         } 
         stage('BUILD')
         {
-            agent
-                {
-                    dockerfile
-                        {   filename 'Dockerfile'
-                            additionalBuildArgs  '--build-arg version=1.0'
-                            args '-p 9000:8085 '
-                        }
-                 } 
+            
             steps
                 {
                     echo 'pruebaa   aa'
