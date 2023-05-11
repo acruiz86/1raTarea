@@ -22,7 +22,14 @@ stages
                  } 
             steps
                 {
-                    echo 'pruebaa  aa'
+                    echo 'pruebaa   aa'
+                }
+        }
+         stage('deploy')
+        {
+                steps
+                {
+                    echo 'deploy'
                 }
         }
     }
