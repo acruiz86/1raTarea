@@ -17,12 +17,12 @@ stages
                     dockerfile
                         {   
                             additionalBuildArgs  '--build-arg version=1.0'
-                            args '-p 9000:8005 '
+                            args '-p 9000:8085 '
                         }
                  } 
             steps
                 {
-                    echo 'pruebaa aa'
+                    echo 'pruebaa  aa'
                 }
         }
     }
