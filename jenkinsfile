@@ -4,7 +4,6 @@ pipeline {
 //additionalBuildArgs  '--build-arg \'-t mi_imagen:${BUILD_NUMBER}\''
     args '-p 8000:8085'
     dir '.'
-    label 'Docker'
     filename 'Dockerfile'
     reuseNode true
   }
