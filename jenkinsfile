@@ -4,7 +4,7 @@ pipeline {
  dockerfile {
 additionalBuildArgs  '-t mi_imagen:${BUILD_NUMBER}'
 //additionalBuildArgs  '--build-arg \'-t mi_imagen:${BUILD_NUMBER}\''
-args '-p 8000:8085 '
+//args '-p 8000:8085'
     /*dir '.'
     filename 'Dockerfile'
     reuseNode true
@@ -24,7 +24,7 @@ args '-p 8000:8085 '
          stage('Deploy') {
             steps {
                 sh 'python --version' 
-                echo " Desplegado ...........correctamente"   
+                echo " Desplegado ..........correctamente"   
             }
         }
     }
