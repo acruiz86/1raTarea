@@ -10,6 +10,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                echo Image.imageName()
                 sh 'python --version'    
             }
         }
