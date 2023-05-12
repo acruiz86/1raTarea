@@ -1,6 +1,12 @@
 pipeline 
 {
-  agent { dockerfile true }
+  agent { dockerfile{
+         filename 'Dockerfile'
+        dir '.'
+        additionalBuildArgs  '--build-arg version=1.0.2'
+        args '-p 8000:8085'
+        reuseNode true
+  }
      
 stages{
      stage('Test'){
