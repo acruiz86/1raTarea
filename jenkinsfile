@@ -2,28 +2,21 @@ pipeline
 {
   agent { dockerfile true }
      
-stages
-    {
-     stage('Test')
-        {
+stages{
+     stage('Test'){
             steps{
             echo 'iniciando   prueba'
             }
         } 
-        stage('Build')
-        {
+        stage('Build'){
             
-            steps
-                {
+            steps{
                     echo 'pruebaa   aa'
                 }
         }
-         stage('Deploy')
-        {
-                steps
-                {
-                    Image.run('-p 8000:8085')
-                    echo 'deploy '
+         stage('Deploy'){
+                steps{
+                  
                 }
         }
     }
