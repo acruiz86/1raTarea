@@ -14,17 +14,9 @@ stages{
             echo 'iniciando   prueba'
             }
         } 
-        stage('Build'){
-            
-            steps{
-                    echo 'pruebaa   aa'
-                }
-        }
-         stage('Deploy'){
-                steps{
-                    sh 'docker info'
-                }
-        }
+
+       
+        
     }
 }
 
