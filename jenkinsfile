@@ -4,7 +4,7 @@ pipeline {
  dockerfile {
 additionalBuildArgs  '-t mi_imagen:${BUILD_NUMBER}'
 //additionalBuildArgs  '--build-arg \'-t mi_imagen:${BUILD_NUMBER}\''
-args '--name \'micontainer\' -p 9000:8085 mi_imagen:${BUILD_NUMBER}'
+//args '--name \'micontainer\' -p 9000:8085 '
     /*dir '.'
     filename 'Dockerfile'
     reuseNode true
@@ -23,6 +23,7 @@ args '--name \'micontainer\' -p 9000:8085 mi_imagen:${BUILD_NUMBER}'
         }
          stage('Deploy') {
             steps {
+                sh 'run --name container${BUILD_NUMBER} -d -p 9000:8085 mi_imagen:${BUILD_NUMBER}'
                 echo " Desplegado ......... docker ....correctamente"   
             }
         }
