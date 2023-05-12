@@ -4,7 +4,7 @@ pipeline {
  dockerfile {
 additionalBuildArgs  '-t mi_imagen:${BUILD_NUMBER}'
 //additionalBuildArgs  '--build-arg \'-t mi_imagen:${BUILD_NUMBER}\''
-args ' -d --name micontainer -p 8000:8085'
+args ' -d --name \'micontainer\' -p 8000:8085'
     /*dir '.'
     filename 'Dockerfile'
     reuseNode true
