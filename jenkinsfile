@@ -2,7 +2,7 @@ pipeline {
     agent {
   dockerfile {
     additionalBuildArgs  '--build-arg \'-t mi_imagen:1\''
-    args '-p 8000:8085 --name \'miappjenkins\''
+    args '-p 9000:8085 --name \'miappjenkins\''
     dir '.'
     filename 'Dockerfile'
     reuseNode true
