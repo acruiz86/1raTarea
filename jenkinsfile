@@ -23,7 +23,7 @@ args '--name \'micontainer\' -p 9000:8085 mi_imagen:${BUILD_NUMBER}'
         }
          stage('Deploy') {
             steps {
-                echo " Desplegado ........ docker ....correctamente"   
+                echo " Desplegado ......... docker ....correctamente"   
             }
         }
     }
