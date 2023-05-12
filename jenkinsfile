@@ -22,7 +22,7 @@ stages{
         }
          stage('Deploy'){
                 steps{
-                    echo "deployyyyy"
+                    sh 'docker info'
                 }
         }
     }
