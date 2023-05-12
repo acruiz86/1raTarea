@@ -23,7 +23,7 @@ args ' -d --name \'micontainer\' -p 8000:8085'
         }
          stage('Deploy') {
             steps {
-                sh 'python --version' 
+                sh 'docker run -d -p 8080:8085 mi_imagen:${BUILD_NUMBER}' 
                 echo " Desplegado ...........correctamente"   
             }
         }
