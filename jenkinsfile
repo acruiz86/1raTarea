@@ -21,7 +21,8 @@ pipeline {
         }
          stage('Deploy') {
             steps {
-                sh 'python --version'    
+                sh 'python --version' 
+                echo " Desplegado correctamente"   
             }
         }
     }
