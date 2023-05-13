@@ -22,10 +22,11 @@ additionalBuildArgs  '-t mi_imagen:${BUILD_NUMBER}'
             }
         }
          stage('Deploy') {
-            tools{
+
+            steps {
+                            tools{
                     dockerTool 'docker'
                 }
-            steps {
                 sh 'docker run --name container${BUILD_NUMBER} -p 9000:8085 mi_imagen:${BUILD_NUMBER}'
                 echo " Desplegado ............ docker ....correctamente"   
             }
