@@ -28,7 +28,7 @@ tools{
              steps {
                 script{
                 //sh 'docker run --name container${BUILD_NUMBER} -p 9000:8085 mi_imagen:${BUILD_NUMBER}'
-                echo " Desplegado ............ docker ....correctamente"   
+                echo " Desplegado ............. docker ....correctamente"   
             }
             }
         }
