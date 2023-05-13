@@ -10,6 +10,9 @@ additionalBuildArgs  '-t mi_imagen:${BUILD_NUMBER}'
     reuseNode true
   */}
 }
+tools{
+    dockerTool 'docker'
+}
     stages {
         stage('Build') {
             steps {
@@ -22,10 +25,7 @@ additionalBuildArgs  '-t mi_imagen:${BUILD_NUMBER}'
             }
         }
          stage('Deploy') {
-            tools{
-                    dockerTool 'docker'
-                }
-            steps {
+             steps {
                 script{
                 sh 'docker run --name container${BUILD_NUMBER} -p 9000:8085 mi_imagen:${BUILD_NUMBER}'
                 echo " Desplegado ............ docker ....correctamente"   
