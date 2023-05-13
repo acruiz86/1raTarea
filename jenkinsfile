@@ -26,8 +26,8 @@ additionalBuildArgs  '-t mi_imagen:${BUILD_NUMBER}'
                     dockerTool 'docker'
                 }
             steps {
-                sh 'docker run --name container${BUILD_NUMBER} -d -p 9000:8085 mi_imagen:${BUILD_NUMBER}'
-                echo " Desplegado .......... docker ....correctamente"   
+                sh 'docker run --name container${BUILD_NUMBER} -p 9000:8085 mi_imagen:${BUILD_NUMBER}'
+                echo " Desplegado ........... docker ....correctamente"   
             }
         }
     }
