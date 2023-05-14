@@ -4,9 +4,19 @@ pipeline {
         args '-p 9000:8085 '
     } }
     stages {
+        stage('Build') {
+            steps {
+                echo 'Esto es una Construccion'
+            }
+        }
         stage('Test') {
             steps {
-                docker.image('mi_imagen:${BUILD_NUMBER}').withRun('-p 9000:8085')
+                echo 'Esto es una Prueba'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Esto es un despliegue'
             }
         }
     }
