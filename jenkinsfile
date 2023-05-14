@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                echo 'sdsdsdsad'
+                docker.image('mi_imagen:${BUILD_NUMBER}').withRun('-p 9000:8085')
             }
         }
     }
