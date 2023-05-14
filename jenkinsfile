@@ -1,11 +1,12 @@
 pipeline {
    agent{ docker {
     image 'mi_imagen:54'
+    args '--name alll -p 9000:8085'
             //dockerfile true
             //dockerfile {
             //additionalBuildArgs  '-t mi_imagen:${BUILD_NUMBER}'
             //additionalBuildArgs  '-t mi_imagen:${BUILD_NUMBER}'
-            args '--name alll -p 9000:8085'
+            
             //args '-p 9000:8085 '
             /*dir '.'
             filename 'Dockerfile'*/ 
