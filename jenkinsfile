@@ -1,21 +1,23 @@
 pipeline {
-    agent {
-        //dockerfile true
- dockerfile {
-//additionalBuildArgs  '-t mi_imagen:${BUILD_NUMBER}'
-additionalBuildArgs  '--build-arg \'-t mi_imagen:${BUILD_NUMBER}\''
-//args '--name \'micontainer\' -p 9000:8085 '
-//args '-p 9000:8085 '
-    /*dir '.'
-   filename 'Dockerfile'*/ 
-    reuseNode true
-  }
-}
+    agent none
+    
 //tools{
   //  dockerTool 'docker'
 //}
     stages {
         stage('Build') {
+            agent {
+            //dockerfile true
+            dockerfile {
+            //additionalBuildArgs  '-t mi_imagen:${BUILD_NUMBER}'
+            additionalBuildArgs  '--build-arg \'-t mi_imagen:${BUILD_NUMBER}\''
+            //args '--name \'micontainer\' -p 9000:8085 '
+            //args '-p 9000:8085 '
+            /*dir '.'
+            filename 'Dockerfile'*/ 
+            reuseNode true
+            }
+            }
             steps {
                 sh 'python --version'    
             }
@@ -27,17 +29,17 @@ additionalBuildArgs  '--build-arg \'-t mi_imagen:${BUILD_NUMBER}\''
         }
          stage('Deploy') {
              agent {
-        //dockerfile true
- dockerfile {
-//additionalBuildArgs  '-t mi_imagen:${BUILD_NUMBER}'
-//additionalBuildArgs   '--build-arg \'-t mi_imagen:${BUILD_NUMBER}\''
-args '--name \'micontainer\' -p 9000:8085 mi_imagen:${BUILD_NUMBER}'
-//args '-p 9000:8085 '
-    /*dir '.'
-  */ 
-    reuseNode true
-  }
-}
+                //dockerfile true
+                dockerfile {
+                //additionalBuildArgs  '-t mi_imagen:${BUILD_NUMBER}'
+                //additionalBuildArgs   '--build-arg \'-t mi_imagen:${BUILD_NUMBER}\''
+                args '--name \'micontainer\' -p 9000:8085 mi_imagen:${BUILD_NUMBER}'
+                //args '-p 9000:8085 '
+                /*dir '.'
+                */ 
+                reuseNode true
+                }
+                }
              steps {
                 script{
                 //sh 'docker run --name container${BUILD_NUMBER} -p 9000:8085 mi_imagen:${BUILD_NUMBER}'
