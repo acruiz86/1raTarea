@@ -1,7 +1,7 @@
 pipeline {
      agent {
         docker { image 'mi_imagen:54' 
-        args '--name pp -p 9000:8085'}
+        args '--name pp -p 8000:8085'}
     }
     stages {
         stage('Build') {
