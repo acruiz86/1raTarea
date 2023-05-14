@@ -1,43 +1,10 @@
-pipeline {
-   agent{ dockerfile {
-    additionalBuildArgs  '-t mi_imagen:${BUILD_NUMBER} --no-cache'
-    args '--name alll -p 9000:8085'
-            //dockerfile true
-            //dockerfile {
-
-            //additionalBuildArgs  '-t mi_imagen:${BUILD_NUMBER}'
-            
-            //args '-p 9000:8085 '
-            /*dir '.'
-            filename 'Dockerfile'*/ 
-            //reuseNode true
-   }
-            }
-            
-    
-//tools{
-  //  dockerTool 'docker'
-//}
-    stages {
-        stage('Build') {            
-            steps {
-                echo "dfsfsdfsff"
-            }
-        }
-         stage('Test') {
-            steps {
-            echo "dfdsfrdsff fsdf"       
-            }
-        }
-         stage('Deploy') {
+pipeline{
+    agent{docker{'mi_imagen:54'}}
+    stages{
+        stage('Build'){
             steps{
-             echo "dfdsfdsfsdf"   
+                ehco 'prueba 3'
             }
-        }
-    }
-    post { 
-        always { 
-            echo 'I will always say Hello again!'
         }
     }
 }
