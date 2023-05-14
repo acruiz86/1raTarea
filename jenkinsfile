@@ -11,7 +11,7 @@ pipeline {
             filename 'Dockerfile'*/ 
             //reuseNode true
             }
-            }
+            
     
 //tools{
   //  dockerTool 'docker'
