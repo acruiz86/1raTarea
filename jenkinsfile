@@ -1,5 +1,8 @@
 pipeline {
-    agent { dockerfile true }
+    agent { dockerfile{
+        additionalBuildArgs  '-t mi_imagen:${BUILD_NUMBER}'
+        args '-p 9000:8085 '
+    } }
     stages {
         stage('Test') {
             steps {
