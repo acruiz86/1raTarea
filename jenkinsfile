@@ -1,9 +1,9 @@
-pipeline{
-    agent{docker{'mi_imagen:54'}}
-    stages{
-        stage('Build'){
-            steps{
-                ehco 'prueba 3'
+pipeline {
+    agent { dockerfile true }
+    stages {
+        stage('Test') {
+            steps {
+                echo 'sdsdsdsad'
             }
         }
     }
