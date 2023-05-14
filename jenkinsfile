@@ -23,7 +23,7 @@ pipeline {
         }
          stage('Test') {
             steps {
-            echo "dfdsfdsfsdf"       
+            echo "dfdsfdsfffsdf"       
             }
         }
          stage('Deploy') {
