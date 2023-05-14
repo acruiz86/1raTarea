@@ -1,5 +1,6 @@
 pipeline {
-   agent{ docker 'mi_imagen:54'
+   agent{ docker {
+    image 'mi_imagen:54'
             //dockerfile true
             //dockerfile {
             //additionalBuildArgs  '-t mi_imagen:${BUILD_NUMBER}'
@@ -9,6 +10,7 @@ pipeline {
             /*dir '.'
             filename 'Dockerfile'*/ 
             //reuseNode true
+   }
             }
             
     
