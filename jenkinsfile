@@ -15,7 +15,7 @@ pipeline {
             //args '-p 9000:8085 '
             /*dir '.'
             filename 'Dockerfile'*/ 
-            reuseNode true
+            //reuseNode true
             }
             }
             steps {
