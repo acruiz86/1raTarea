@@ -1,6 +1,5 @@
 pipeline {
-   agent {
-            docker 'mi_imagen:54'
+   agent{ docker 'mi_imagen:54'
             //dockerfile true
             //dockerfile {
             //additionalBuildArgs  '-t mi_imagen:${BUILD_NUMBER}'
