@@ -1,7 +1,9 @@
 pipeline {
-    agent { dockerfile true }
+     agent {
+        docker { image 'mi_imagen:54' }
+    }
     stages {
-        stage('Test') {
+        stage('Build') {
             steps {
                 echo 'sdsdsdsad'
             }
