@@ -30,6 +30,7 @@ pipeline {
          stage('Deploy') {
             steps{
              node {
+                labe 'docker'
                 //dockerfile true
                 //additionalBuildArgs  '-t mi_imagen:${BUILD_NUMBER}'
                 //additionalBuildArgs   '--build-arg \'-t mi_imagen:${BUILD_NUMBER}\''
