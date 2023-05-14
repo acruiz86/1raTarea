@@ -30,7 +30,7 @@ additionalBuildArgs  '--build-arg \'-t mi_imagen:${BUILD_NUMBER}\''
         //dockerfile true
  dockerfile {
 //additionalBuildArgs  '-t mi_imagen:${BUILD_NUMBER}'
-//additionalBuildArgs  '--build-arg \'-t mi_imagen:${BUILD_NUMBER}\''
+//additionalBuildArgs   '--build-arg \'-t mi_imagen:${BUILD_NUMBER}\''
 args '--name \'micontainer\' -p 9000:8085 mi_imagen:${BUILD_NUMBER}'
 //args '-p 9000:8085 '
     /*dir '.'
