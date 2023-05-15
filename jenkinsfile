@@ -1,6 +1,7 @@
 pipeline {
-    agent { dockerfile{
-        additionalBuildArgs  '-t mi_imagen:${BUILD_NUMBER}'
+    agent { docker{
+        image 'mi_imagen:72'
+       // additionalBuildArgs  '-t mi_imagen:${BUILD_NUMBER}'
         args '-p 9000:8085 '
     } }
     stages {
@@ -16,7 +17,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Esto es  un despliegue'
+                echo 'Esto es un despliegue'
             }
         }
     }
