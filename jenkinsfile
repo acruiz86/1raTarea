@@ -1,6 +1,6 @@
 pipeline {
     agent { docker{
-        image 'mi_imagen:72'
+        image '0955ea822515adc8e2ae6910e2b41019f34cc094:latest'
        // additionalBuildArgs  '-t mi_imagen:${BUILD_NUMBER}'
         args '-p 9000:8085 '
     } }
