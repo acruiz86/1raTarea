@@ -10,13 +10,7 @@ parameters{
     string(name:'puerto',defaultValue:'8000', description:'puerto')
 }
 stages{
-    stage('install'){
-        steps{
-            git branch: 'master', url: 'https://github.com/acruiz86/1raTarea.git/'
-
-        }
-    }
-     stage('build'){
+      stage('build'){
         steps{
             
                 echo 'building....'
@@ -34,7 +28,7 @@ stages{
                 
                     script{
                         sh 'docker build --help'
-                        sh 'docker build -t ${imagen_name}:${tag_image} .'
+                        sh 'docker build -t miimagen:1 .'
                     }
             
             
