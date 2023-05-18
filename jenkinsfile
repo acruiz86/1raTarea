@@ -1,8 +1,6 @@
 pipeline {
 agent {label 'agente1'}
-tools{
-    dockerTool 'docker'
-}
+
 parameters{
     string(name:'imagen_name',defaultValue:'flask_imagen_jen', description:'nombre de la imagne')
     string(name:'conteiner_name',defaultValue:'flask_conteiner_jenk', description:'nombre del contenedor')
