@@ -1,0 +1,43 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Crear Recurso en EC2 con una app en flask"
+Parameters:
+  KeyName:
+    Description: "Nombre de la llave existente en EC2"
+    Type: String
+    Default: training-alie
+  InstanceType:
+    Description: WebServer EC2 instance type
+    Type: String
+    Default: t2.micro
+  VpcId:
+    Description: "VPC "
+    Type: String
+    Default: vpc-81fef4fb
+  ImageId:
+    Description: "AMI de entrenamiento imagen "
+    Type: String
+    Default: ami-0c4696793fc3d4844
+Resources:
+  AlieEC2CloudF: 
+    Type: "AWS::EC2::Instance"
+    Properties: 
+      ImageId: !Ref 'ImageId' 
+      InstanceType: !Ref 'InstanceType'
+      KeyName: !Ref 'KeyName'
+      SecurityGroupIds: [!Ref ALieInstanceSGCloudF]
+
+  ALieInstanceSGCloudF:
+    Type: "AWS::EC2::SecurityGroup"
+    Properties: 
+      GroupDescription: "Security Group for instance create whit Cloud Formations"
+      GroupName: "AlieSGCloudFormation"
+      VpcId: !Ref 'VpcId'
+      SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: 80
+        ToPort: 80
+        CidrIp: 0.0.0.0/0
+      - IpProtocol: tcp
+        FromPort: 22
+        ToPort: 22
+        CidrIp: 0.0.0.0/0
